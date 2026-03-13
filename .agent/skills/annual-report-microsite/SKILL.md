@@ -181,22 +181,37 @@ GOES TO: [Which internal page it belongs on]
 
 Produce a **structured markdown document** — a specification for designers to work from. Not HTML, not a prototype, not a mockup. A document your team can read, mark up, and approve.
 
-### Universal homepage section order:
+### Statutory Content Rule (CRITICAL)
+**Annual Reports are statutory/legal documents. You MUST extract text verbatim.** 
+- Do NOT rewrite, summarise, paraphrase, or invent text.
+- If a section needs a short blurb, copy the exact opening sentence from the PDF.
+- If an exact snippet isn't available, state `[Requires client to provide [X] word snippet here]` instead of making one up.
+
+### Content Snippet Requirement
+Every single card, tile, or pillar on the homepage (Leadership, Capitals, Products, ESG, Reasons to Invest) **must** include a supporting text snippet extracted directly from the PDF. Do not just output headlines.
+
+### Universal homepage section order (with flexibility):
+
+The top sections have a specific flow rule: KPIs and About Company can shuffle positions depending on what the company emphasizes. Leadership must always be in the top 4.
 
 ```
 1.  NAVIGATION          → Logo | Links | CTA
-2.  HERO                → Tagline + KPI strip (animated counters)
-3.  COMPANY AT A GLANCE → Identity + scale facts + operations map
-4.  VALUE CREATION MODEL→ Interactive flow diagram (if present in PDF)
-5.  LEADERSHIP VOICES   → Chairman + CEO + CFO cards (teasers)
-6.  INVESTMENT CASE     → Reason tiles (if section exists in report)
-7.  STRATEGY            → Strategic priority tiles
-8.  KPI DASHBOARD       → Financial + Operational + ESG columns + INTERACTIVE CHARTS
-9.  PRODUCTS/SEGMENTS   → Cards per product/segment (if multi-product company)
-10. ESG / SUSTAINABILITY → Pillar cards with headline stat each
-11. AWARDS              → Award grid
-12. HUMAN STORIES       → Case study / feature cards (if present)
-13. FOOTER              → Navigation + download
+2.  HERO                → Tagline (Verbatim from PDF cover)
+    -- Shuffle Section 3 & 4 based on report emphasis: --
+3.  COMPANY AT A GLANCE → Who we are + scale facts (Verbatim)
+4.  KPI DASHBOARD / HIGHLIGHTS → Financial + Operational figures (Must use real PDF numbers only)
+    -----------------------------------------------------
+5.  LEADERSHIP VOICES   → Chairman + CEO + CFO cards (Must include verbatim snippet for each)
+6.  GEOGRAPHICAL FOOTPRINT → Operations map / presence (Split from At a Glance)
+7.  VALUE CREATION MODEL→ Interactive flow diagram with snippet content for each Capital (if present)
+8.  INVESTMENT CASE     → Reason tiles + verbatim snippets (if section exists in report)
+9.  STRATEGY            → Strategic priority tiles + verbatim snippets
+10. INTERACTIVE CHARTS  → 4-6 trend charts (Must use real data points from PDF, never dummy data)
+11. PRODUCTS/SEGMENTS   → Cards per product/segment + verbatim snippets
+12. ESG / SUSTAINABILITY → Pillar cards + headline stat + verbatim snippet each
+13. AWARDS              → Award grid (Real names and awarding bodies)
+14. HUMAN STORIES       → Case study / feature cards + verbatim snippets (if present)
+15. FOOTER              → Navigation + download
 ```
 
 > **Adapting for different companies:**
@@ -253,15 +268,19 @@ DESIGN NOTES:
 
 | Rule | Detail |
 |---|---|
+| **STATUTORY RULE: Verbatim ONLY** | Never rewrite, paraphrase, or invent text. Copy exact sentences from the PDF. If a visual needs a snippet and the PDF doesn't have one, write `[Needs snippet]`. |
+| **Snippets required everywhere** | A headline is never enough. Every card/tile (Capitals, Products, Leaders, ESG) needs 1-2 lines of supporting text. |
+| **Real data ONLY** | Every number, KPI, and chart data point MUST be found in the PDF. Do not estimate or extrapolate. |
+| **Top 4 Positioning** | Leadership Messages must appear within the first 4 content sections of the homepage. |
+| **Shuffle KPIs and About** | Based on the report's tone, place either KPIs or Company at a Glance directly below the Hero. |
+| **Geographical Footprint is standalone** | Always separate the geographic map/presence from the 'At a Glance' text section. |
 | **Don't lead with financials** | Unless the company is a financial services firm, finance comes after identity and leadership |
-| **Always include leadership voice** | Even if there's only one leader message |
 | **Respect the company's own emphasis** | If the cover tagline is about sustainability, the hero should reflect that — even if revenue grew more |
 | **Numbers need context** | Never show a raw number without a label and YoY change (or a superlative: "record", "first time", "#1") |
 | **Awards need the awarding body** | "We won an award" is meaningless. The body's name is the credibility |
 | **ESG always gets its own section** | Even for companies that don't lead with ESG — investors expect it |
 | **Value Creation Model always goes on homepage if present** | It is the one diagram that tells the whole company story. If the PDF has it, it goes on the homepage — never omit it |
 | **Every chart must specify its data in the wireframe** | Don't just say "add a chart here" — specify: chart type, X-axis, Y-axis, data series, years, and hover interaction |
-| **Charts should use data from the PDF, not estimated** | Extract actual numbers from the KPI/financial sections to populate chart specs |
 | **Prioritise trend charts over single-year charts** | A 5-year revenue trend is more valuable on a homepage than a single year's number in a bar |
 | **Statutory chapters never go on homepage** | Directors' Report, Audit Report, remuneration disclosures — always internal or download |
 | **Images are placeholders in the wireframe** | Describe the image direction (aerial shot, people at work, product close-up) — don't leave it blank |
@@ -272,13 +291,9 @@ DESIGN NOTES:
 
 Before delivering `wireframe.md` to the team, verify:
 
-- [ ] Does the hero use the company's actual year tagline (not a generic headline)?
-- [ ] Are all KPI numbers real and sourced from the PDF (not estimated)?
-- [ ] Is there at least one leadership quote that is verbatim from the PDF?
-- [ ] Does the reasoning log explain every excluded section?
-- [ ] Are any awards included that are regional/community-level? (Remove them)
-- [ ] Does the wireframe adapt for this company's specific type? (Single product? Financial company? Conglomerate?)
-- [ ] Is the section order logical for this company's primary audience? (Investors first? Community first?)
-- [ ] If a Value Creation Model exists in the PDF, is it included in the wireframe with its flow structure described?
-- [ ] Does every chart in the wireframe specify: chart type, axes, data series, years, and hover interaction?
-- [ ] Are chart data points sourced from actual PDF numbers, not estimated?
+- [ ] Is every sentence verbatim from the PDF? (Did the AI hallucinate or rewrite anything?)
+- [ ] Are KPIs or About Company positioned directly below the Hero?
+- [ ] Are Leadership voices in the top 4 sections?
+- [ ] Is Geographical Footprint a separate section from At a Glance?
+- [ ] Does every single card (Capitals, Strategy, Products) have a text snippet?
+- [ ] Are all chart data points sourced from actual PDF numbers, not estimated?
