@@ -101,19 +101,11 @@ For each homepage-eligible chapter, read the **first 2–3 pages** of that chapt
 - The 5–8 numbers the company chose to feature prominently → KPI strip
 - *Why it matters:* These are the company's own editorial choices. If they chose to lead with sustainability rank over revenue, that tells you their brand priority.
 
-**Chairman / MD / Chairperson letter:**
-- Opening sentence → Leadership card teaser quote
-- What theme does the letter emphasise? (Growth? Resilience? Sustainability? Innovation?) → Tone signal for the entire microsite
-- *Why it matters:* The Chairperson sets the emotional frame of the report.
-
-**CEO / MD / Managing Director message or Q&A:**
-- Opening operational statement → CEO card quote
-- What 2–3 achievements does the CEO choose to highlight first? → These are homepage-worthy KPIs
-- *Why it matters:* The CEO's priorities reveal what the company most wants stakeholders to remember.
-
-**CFO / Finance Director statement:**
-- The headline financial achievement they lead with → CFO card teaser
-- *Why it matters:* Signals which financial metric is most significant this year.
+**Leadership Voices / Messages:**
+- Extract EVERY top management message present in the report (Chairman, MD, CEO, CFO, etc).
+- Opening operational/strategic statement → Teaser card quote (verbatim)
+- **Sequence rule:** Order them strictly by designation hierarchy (e.g., Chairman → MD → CEO → CFO).
+- *Why it matters:* Leadership sets the tone. Every leader featured in the report must be featured on the homepage in their proper rank.
 
 **Investment Case / Why Invest section (if present):**
 - Extract all bullet points or reason tiles verbatim — this content is already written for the homepage
@@ -124,19 +116,24 @@ For each homepage-eligible chapter, read the **first 2–3 pages** of that chapt
 - Count: if there are more than 7, only show the first 5–6 on the homepage; link to full strategy page
 - *Why it matters:* Forward-looking content balances the backward-looking KPIs.
 
-**ESG / Sustainability chapter opener (first 2 pages only):**
-- What sustainability framework does the company use? (Net Zero, Zero Harm, GRI, TCFD, etc.)
-- What are their 3–4 ESG pillars? (Environment / Social / Governance are common, but vary)
-- What is the single most impressive ESG achievement this year? → Featured stat
-- *Why it matters:* ESG is now a primary lens for investors, regulators, and media.
+**ESG / Sustainability chapter (first 2-3 pages only):**
+- Split this into 3 distinct sections: **1. Environment, 2. Social, 3. Governance**.
+- For each of the 3 sections, extract an **introduction paragraph** verbatim.
+- If present, extract any **numbers & key highlights** mentioned in the chapter to accompany that section's intro.
+- *Why it matters:* ESG is now a primary lens for investors, regulators, and media. Splitting into E, S, and G provides structured clarity.
 
 **Value Creation Model / Business Model chapter (if present):**
-- Look for chapter titles like: "Value Creation Model", "Our Business Model", "Six Capitals", "How We Create Value", "Input-Output Model"
-- Extract the model's core flow — what goes IN (inputs/capitals) and what comes OUT (outputs/outcomes for stakeholders)
-- Identify how many "capitals" or "pillars" the model uses — this determines the layout (typically 4–6 columns or a circular/flow diagram)
-- Note the stakeholder groups the model addresses (shareholders, employees, communities, environment, etc.)
-- *Why it matters:* The Value Creation Model is the single diagram that explains the whole company — it shows how resources turn into value. It replaces a generic "about us" paragraph with a structured, visual story. Clients love it on the homepage because it differentiates their microsite from a simple PDF summary.
-- *In the wireframe:* Describe it as an interactive flow diagram — left side = inputs, centre = business activities, right side = outputs. Each node is clickable to its detail page.
+- Extract the model's core flow — what goes IN (inputs/capitals) and what comes OUT (outputs/outcomes for stakeholders).
+- **Isolation Rule:** Only extract Value Creation content from the specific Value Creation chapter. Do not pull strategy content into this section.
+- *In the wireframe:* Describe it as an interactive flow diagram with a text snippet for each capital/pillar.
+
+**Strategy / Strategic Priorities chapter:**
+- Extract each priority name and its one-line verbatim description.
+- **Isolation Rule:** Only extract Strategy content from the Strategy chapter. Do not mix it with Value Creation or Operations.
+
+**Financial Highlights:**
+- **Always showcase:** Revenue, EBITDA, PAT, and Dividend Declared.
+- If (and only if) these specific metrics are unavailable, show the primary financial numbers provided.
 
 **Awards / Recognition chapter:**
 - List every award and its awarding body
@@ -201,17 +198,18 @@ The top sections have a specific flow rule: KPIs and About Company can shuffle p
 3.  COMPANY AT A GLANCE → Who we are + scale facts (Verbatim)
 4.  KPI DASHBOARD / HIGHLIGHTS → Financial + Operational figures (Must use real PDF numbers only)
     -----------------------------------------------------
-5.  LEADERSHIP VOICES   → Chairman + CEO + CFO cards (Must include verbatim snippet for each)
-6.  GEOGRAPHICAL FOOTPRINT → Operations map / presence (Split from At a Glance)
-7.  VALUE CREATION MODEL→ Interactive flow diagram with snippet content for each Capital (if present)
-8.  INVESTMENT CASE     → Reason tiles + verbatim snippets (if section exists in report)
-9.  STRATEGY            → Strategic priority tiles + verbatim snippets
-10. INTERACTIVE CHARTS  → 4-6 trend charts (Must use real data points from PDF, never dummy data)
-11. PRODUCTS/SEGMENTS   → Cards per product/segment + verbatim snippets
-12. ESG / SUSTAINABILITY → Pillar cards + headline stat + verbatim snippet each
-13. AWARDS              → Award grid (Real names and awarding bodies)
-14. HUMAN STORIES       → Case study / feature cards + verbatim snippets (if present)
-15. FOOTER              → Navigation + download
+5.  LEADERSHIP VOICES   → ALL top management messages ordered by designation hierarchy (Verbatim snippets)
+6.  BOARD OF DIRECTORS  → Images, names, and "Read More" CTA only (no bios)
+7.  GEOGRAPHICAL FOOTPRINT → Operations map / presence (Split from At a Glance)
+8.  VALUE CREATION MODEL→ Interactive flow diagram (Sourced ONLY from Value Creation chapter)
+9.  INVESTMENT CASE     → Reason tiles + verbatim snippets (if section exists in report)
+10. STRATEGY            → Strategic priority tiles + verbatim snippets (Sourced ONLY from Strategy chapter)
+11. INTERACTIVE CHARTS  → 4-6 trend charts (Must use real data points from PDF, never dummy data)
+12. PRODUCTS/SEGMENTS   → Cards per product/segment + verbatim snippets
+13. ESG / SUSTAINABILITY → STRICT 3-part split: Environment, Social, Governance. Intro para + numbers & key highlights for each.
+14. AWARDS              → Award grid (Real names and awarding bodies)
+15. HUMAN STORIES       → Case study / feature cards + verbatim snippets (if present)
+16. FOOTER              → Navigation + download
 ```
 
 > **Adapting for different companies:**
@@ -268,17 +266,19 @@ DESIGN NOTES:
 
 | Rule | Detail |
 |---|---|
-| **STATUTORY RULE: Verbatim ONLY** | Never rewrite, paraphrase, or invent text. Copy exact sentences from the PDF. If a visual needs a snippet and the PDF doesn't have one, write `[Needs snippet]`. |
-| **Snippets required everywhere** | A headline is never enough. Every card/tile (Capitals, Products, Leaders, ESG) needs 1-2 lines of supporting text. |
+| **STATUTORY RULE: Verbatim ONLY** | Never rewrite, paraphrase, or invent text. Use headings for headings and copy for copy from the PDF as is. |
+| **Strict Section Isolation** | Use content ONLY from the start to the end of a section's specific chapter. Do not pull content from other chapters. |
+| **Snippets required everywhere** | A headline is never enough. Every card/tile needs 1-2 lines of supporting text. |
 | **Real data ONLY** | Every number, KPI, and chart data point MUST be found in the PDF. Do not estimate or extrapolate. |
-| **Top 4 Positioning** | Leadership Messages must appear within the first 4 content sections of the homepage. |
+| **Fixed Financial Metrics** | Always showcase Revenue, EBITDA, PAT, and Dividend Declared (unless truly absent). |
+| **Leadership Hierarchy Top 4 Position** | All top management messages must be placed in the top 4 sections, ordered strictly by designation sequence. |
+| **Board of Directors** | Always follows Leadership. Only includes images, names, and a Read More CTA. |
+| **3-Part ESG Split** | ESG must be 3 distinct sections (E, S, G). Each needs an intro para + numbers & key highlights. |
 | **Shuffle KPIs and About** | Based on the report's tone, place either KPIs or Company at a Glance directly below the Hero. |
 | **Geographical Footprint is standalone** | Always separate the geographic map/presence from the 'At a Glance' text section. |
-| **Don't lead with financials** | Unless the company is a financial services firm, finance comes after identity and leadership |
+| **Value Creation vs Strategy** | These are different chapters. Never mix their content. |
 | **Respect the company's own emphasis** | If the cover tagline is about sustainability, the hero should reflect that — even if revenue grew more |
-| **Numbers need context** | Never show a raw number without a label and YoY change (or a superlative: "record", "first time", "#1") |
 | **Awards need the awarding body** | "We won an award" is meaningless. The body's name is the credibility |
-| **ESG always gets its own section** | Even for companies that don't lead with ESG — investors expect it |
 | **Value Creation Model always goes on homepage if present** | It is the one diagram that tells the whole company story. If the PDF has it, it goes on the homepage — never omit it |
 | **Every chart must specify its data in the wireframe** | Don't just say "add a chart here" — specify: chart type, X-axis, Y-axis, data series, years, and hover interaction |
 | **Prioritise trend charts over single-year charts** | A 5-year revenue trend is more valuable on a homepage than a single year's number in a bar |
@@ -292,8 +292,11 @@ DESIGN NOTES:
 Before delivering `wireframe.md` to the team, verify:
 
 - [ ] Is every sentence verbatim from the PDF? (Did the AI hallucinate or rewrite anything?)
+- [ ] Are chapters strictly isolated? (No Strategy content in Value Creation?)
+- [ ] Are ALL leadership messages included and sequenced by designation?
+- [ ] Is the Board of Directors section present below Leadership?
+- [ ] Does Financial Highlights explicitly include Revenue, EBITDA, PAT, and Dividend?
+- [ ] Is ESG strictly split into 3 sections (E, S, G) with intro paras and numbers/highlights?
 - [ ] Are KPIs or About Company positioned directly below the Hero?
-- [ ] Are Leadership voices in the top 4 sections?
-- [ ] Is Geographical Footprint a separate section from At a Glance?
 - [ ] Does every single card (Capitals, Strategy, Products) have a text snippet?
 - [ ] Are all chart data points sourced from actual PDF numbers, not estimated?
