@@ -140,6 +140,14 @@ For each homepage-eligible chapter, read the **first 2–3 pages** of that chapt
 - Filter: keep only **international, national, or industry-body** awards on homepage; regional/community awards go on internal pages
 - *Why it matters:* Third-party validation builds trust with first-time readers.
 
+**Design System Extraction (Global throughout report):**
+- **Colors:** Identify the primary brand color, secondary accents, and background colors used prominently. Pay special attention to **gradients** (e.g., "Navy to Teal linear gradient used on section backgrounds").
+- **Typography:** Identify the font stack used. Extract specific styling rules for:
+  - **Headings (H1/H2):** Font family, weight (e.g., Bold/Black), capitalization (e.g., All-Caps), and primary color used.
+  - **Body Copy:** Font family, weight (e.g., Regular/Light), and color.
+  - **Highlights/Callouts:** Font styling used for pull quotes or large KPI numbers (e.g., "Italics Serif for quotes", "Oversized bold sans-serif for numbers").
+- *Why it matters:* The wireframe needs to give the UI designer the exact visual rules established by the print designers building the PDF.
+
 **Graphs and charts throughout the report:**
 - While reading each chapter, note every chart, graph, or data visualisation that appears
 - For each one, record: chart type (bar, line, pie, donut, area), what it measures, how many data points, and the time range (e.g., 5-year trend)
@@ -192,6 +200,8 @@ Every single card, tile, or pillar on the homepage (Leadership, Capitals, Produc
 The top sections have a specific flow rule: KPIs and About Company can shuffle positions depending on what the company emphasizes. Leadership must always be in the top 4.
 
 ```
+0.  DESIGN SYSTEM       → Brand Colors (incl. gradients) + Typography (Headings, Body, Highlights)
+    -----------------------------------------------------
 1.  NAVIGATION          → Logo | Links | CTA
 2.  HERO                → Tagline (Verbatim from PDF cover)
     -- Shuffle Section 3 & 4 based on report emphasis: --
@@ -256,9 +266,10 @@ DESIGN NOTES:
 > 1. Extract all text from the PDF page by page
 > 2. Find the Table of Contents — map every chapter to its page range
 > 3. Classify every chapter using the universal homepage categories
-> 4. Read the narrative from every homepage-eligible chapter (first 2–3 pages each): cover, highlights, leadership messages, investment case (if present), strategic priorities, ESG opener, awards
-> 5. Document your section reasoning — why each section was chosen or rejected
-> 6. Generate `wireframe.md` — the full document wireframe with real extracted content and design notes"
+> 4. Read the narrative content from every homepage-eligible chapter: cover, highlights, leadership messages, investment case (if present), strategic priorities, ESG opener, awards
+> 5. While reading, dynamically extract the global **Design System** (Brand colors, gradients, and font styling for headings/body/highlights).
+> 6. Document your section reasoning — why each section was chosen or rejected
+> 7. Generate `wireframe.md` — starting with the Design System block, followed by the full document wireframe with real extracted content and design notes"
 
 ---
 
@@ -292,6 +303,7 @@ DESIGN NOTES:
 Before delivering `wireframe.md` to the team, verify:
 
 - [ ] Is every sentence verbatim from the PDF? (Did the AI hallucinate or rewrite anything?)
+- [ ] Is there a "DESIGN SYSTEM" block at the top containing Colors (with gradients) and Typography (Headings, Body, Highlights)?
 - [ ] Are chapters strictly isolated? (No Strategy content in Value Creation?)
 - [ ] Are ALL leadership messages included and sequenced by designation?
 - [ ] Is the Board of Directors section present below Leadership?
