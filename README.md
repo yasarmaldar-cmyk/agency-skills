@@ -48,12 +48,17 @@ Using the annual-report-microsite skill, read the Annual Report PDF at [PATH].
 3. Classify every chapter using the universal homepage categories
 4. Read the narrative content from every homepage-eligible chapter:
    cover, highlights, leadership messages, value creation model (if present),
-   investment case (if present), strategic priorities, KPI section,
-   ESG chapter opener, and awards
-5. While reading, note all charts/graphs — flag the top 4–6 for interactive web charts
-6. Document your section reasoning — why each was chosen or rejected
-7. Generate wireframe.md — the full document wireframe with real content,
-   chart specifications, and design notes
+   investment case (if present), strategy, KPI section, ESG chapter opener, and awards.
+5. While reading, dynamically extract the global Design System (Colors, Gradients, Typography).
+6. Apply all Universal Editorial Rules strictly:
+   - Extract content verbatim (No summarising)
+   - Do not cross-pollinate chapter content (e.g. Keep Value Creation and Strategy separate)
+   - Split ESG into 3 distinct sections (E, S, G)
+   - Sequence all top leadership by designation
+   - Always include Revenue, EBITDA, PAT, and Dividend Declared
+7. Note all charts/graphs — flag the top 4–6 for interactive web charts using real data points.
+8. Document your section reasoning — why each was chosen or rejected.
+9. Generate wireframe.md — starting with the Design System, followed by the full document wireframe with real content, chart specs, and design notes.
 ```
 
 ### What you get
