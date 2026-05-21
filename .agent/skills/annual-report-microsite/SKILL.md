@@ -245,6 +245,7 @@ Every surface on the homepage has a cap. Enforce them.
 
 | Surface | Max words | What to put there |
 |---|---|---|
+| Section headline (on-page H2) | 10 | **Verbatim chapter / sub-chapter title from the PDF.** Not a wireframe category label. |
 | Hero tagline | 12 | Year theme, verbatim from PDF cover |
 | Hero subtitle | 15 | Supporting line, verbatim |
 | About blurb | 60 | One sentence on identity + one on scale |
@@ -304,6 +305,7 @@ The top sections have a specific flow rule: KPIs and About Company can shuffle p
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SECTION [N]: [Section Name]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+HEADLINE:     [Verbatim chapter / sub-chapter title from the PDF — exact text, ≤10 words. This is the on-page H2 that renders on the live site.]
 LAYOUT:       [Full width / 2-col / 3-col grid / staged scroll / arc carousel / etc.]
 SOURCE:       PDF Pages [X–Y] — "[exact chapter name]"
 LINKS TO:     [Internal page that holds the full chapter content]
@@ -363,6 +365,7 @@ The homepage wireframe should fit on roughly **3–4 printed A4 pages of markdow
 | Rule | Detail |
 |---|---|
 | **STATUTORY RULE: Verbatim ONLY** | Never rewrite, paraphrase, or invent text. Headings stay as headings; copy stays as copy from the PDF. |
+| **Section Headlines are Verbatim** | Every homepage section's on-page H2 must be the **exact chapter or sub-chapter title from the PDF** — not a wireframe category label. Wireframe structural labels (e.g. "SECTION 4: KPI DASHBOARD") are internal organisational tags only; they do not appear on the live site. The live H2 always comes from the `HEADLINE:` field, which is sourced verbatim from the PDF. |
 | **Homepage = Index, not Destination** | Every section is a teaser. One verbatim sentence per surface. Depth lives on internal pages. |
 | **Single Sentence per Snippet** | Never stitch sentences. Pick the sharpest one verbatim. If none works, flag `[Requires client snippet]`. |
 | **Word Budgets are Hard Caps** | The Step 5 budgets are non-negotiable. Step 6 (The Cut) enforces them. |
@@ -401,6 +404,7 @@ Before delivering `wireframe.md` to the team, verify:
 
 **Verbatim integrity**
 - [ ] Is every sentence verbatim from the PDF? (Did the AI hallucinate or rewrite anything?)
+- [ ] Does every section carry a `HEADLINE:` field with the **verbatim** chapter title from the PDF (not a wireframe category label like "KPI DASHBOARD" or "BUSINESS VERTICALS")?
 - [ ] Are chapters strictly isolated? (No Strategy content in Value Creation?)
 - [ ] Are all chart data points sourced from actual PDF numbers, not estimated?
 
